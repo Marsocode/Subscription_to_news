@@ -49,7 +49,7 @@ app.post("/", function(req, res) {
       if (JSON.parse(data).error_count === 0) {
         res.sendFile(__dirname + '/success.html');
       } else if (JSON.parse(data).errors[0].error_code === "ERROR_CONTACT_EXISTS") {
-        res.sendFile(__dirname + "/already_sub.html");
+        res.sendFile(__dirname + "/already_subscribed.html");
       } else {
         res.sendFile(__dirname + '/failure.html');
       }
