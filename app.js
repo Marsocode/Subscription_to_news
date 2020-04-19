@@ -38,7 +38,7 @@ app.post("/", function(req, res) {
   const url = 'https://usX.api.mailchimp.com/3.0/lists/'+ listid; //X - replace with number from your APIkey
   const options = {
     method: "POST",
-    auth: "lika:x" // x = your APIkey
+    auth: "random_short_text:x" // x = your APIkey
   };
 
   const request = https.request(url, options, function(response) {
