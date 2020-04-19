@@ -4,7 +4,7 @@ const express = require("express");
 const body_parser = require("body-parser");
 const https = require('https');
 const app = express();
-app.use(express.static("public")); // to show static files
+app.use(express.static("public")); 
 
 app.use(body_parser.urlencoded({
   extended: true
@@ -34,11 +34,11 @@ app.post("/", function(req, res) {
   };
   var json_data = JSON.stringify(data);
 
-  const listid = '6cbd20d126';
-  const url = 'https://us4.api.mailchimp.com/3.0/lists/'+ listid;
+  const listid = 'xxxxxxxxxx';
+  const url = 'https://usX.api.mailchimp.com/3.0/lists/'+ listid;
   const options = {
     method: "POST",
-    auth: "lika:a7f9b215d1613bb90a439ef866b4b71c-us4"
+    auth: "lika:apikey"
   };
 
   const request = https.request(url, options, function(response) {
@@ -66,9 +66,5 @@ app.post("/failure", function(req, res) {
 });
 
 app.listen(process.env.PORT || 3000, function() {
-  console.log("Server started");
+  console.log("Server is running");
 });
-
-
-//apikey='a7f9b215d1613bb90a439ef866b4b71c-us4';
-//listid = '6cbd20d126';
