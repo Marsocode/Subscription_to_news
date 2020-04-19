@@ -34,11 +34,11 @@ app.post("/", function(req, res) {
   };
   var json_data = JSON.stringify(data);
 
-  const listid = 'xxxxxxxxxx';
-  const url = 'https://usX.api.mailchimp.com/3.0/lists/'+ listid;
+ const listid = 'xxxxxxxxxx'; //your listID
+  const url = 'https://usX.api.mailchimp.com/3.0/lists/'+ listid; //X - replace with number from your APIkey
   const options = {
     method: "POST",
-    auth: "lika:apikey"
+    auth: "lika:x" // x = your APIkey
   };
 
   const request = https.request(url, options, function(response) {
